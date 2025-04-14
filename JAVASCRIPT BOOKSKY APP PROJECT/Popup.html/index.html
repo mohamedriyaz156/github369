@@ -1,0 +1,68 @@
+<style>
+	.overlay{
+		background-color: black;
+		width:100%;
+		height: 100%;
+		position: absolute;
+		top:0px;
+		left: 0px;
+		opacity: 0.8;
+		z-index: 1;
+		display: block;
+	}
+
+	.popupbox{
+		position: absolute;
+		z-index: 3;
+		background-color: white;
+		color: black;
+		width: 40%;
+		padding: 20px;
+		border-radius: 10px;
+		left: 30%;
+		display: block;
+	}
+</style>
+
+<button onclick="show()">Show</button>
+<div class="overlay"></div>
+<div class="popupbox">
+	<p>First things first.I'ma say all the words inside my head.I'm fired up and tired of the way that things have been, oh-ooh.The way that things have been, oh-ooh.Second thing second.Don't you tell me what you think that I could be. I'm the one at the sail, I'm the master of my sea, oh-ooh.The master of my sea, oh-ooh.I was broken from a young age.Taking my sulking to the masses. Writing my poems for the few.</p>
+	<button onclick="closepopup()">Close</button>
+</div>
+
+<script>
+	//popup overlay
+	//popup box
+	var popupoverlay=document.querySelector(".overlay")
+	var popupbox=document.querySelector(".popupbox")
+	function show()
+	{
+		popupbox.style.display="block"
+		popupoverlay.style.display="block"
+	}
+
+	function closepopup()
+	{
+		popupbox.style.display="none"
+		popupoverlay.style.display="none"
+	}
+</script>
+
+
+ <!-- <button id="btn">show</button>
+
+ <script>
+
+ 	var button = document.getElementById("btn")
+
+ 	button.addEventListener("click",function(){
+ 		alert("Hello")
+ 	})
+
+ 	button.addEventListener("mouseenter",function(){
+ 		alert("Mouse over")
+ 	})
+</script>
+
+ -->
